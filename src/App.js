@@ -16,8 +16,8 @@ const App = () => {
       console.log('Executed')
       setTasks(tasksFromServer);
     };
-    getTasks();
-  }, []);
+    setInterval(getTasks, 60000)
+  }, [tasks]);
 
   //Fetch tasks
   const fetchTasks = async () => {
